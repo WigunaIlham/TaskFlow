@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.board-column {
+    min-height: 500px;
+}
+
+.task-card {
+    cursor: move;
+    transition: all 0.2s;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.ghost-card {
+    opacity: 0.5;
+}
+
+.dragging-card {
+    transform: rotate(2deg);
+}
+
+/* Status colors */
+.status-todo {
+    background-color: #dbeafe;
+    border-left-color: #3b82f6;
+}
+
+.status-in_progress {
+    background-color: #fef3c7;
+    border-left-color: #f59e0b;
+}
+
+.status-done {
+    background-color: #d1fae5;
+    border-left-color: #10b981;
+}
+
+/* Priority badges */
+.priority-low {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.priority-medium {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.priority-high {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
