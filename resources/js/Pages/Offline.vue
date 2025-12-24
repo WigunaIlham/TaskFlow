@@ -1,0 +1,150 @@
+<!-- resources/js/Pages/Offline.vue -->
+<template>
+    <div
+        class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col items-center justify-center p-6"
+    >
+        <div class="max-w-md w-full text-center">
+            <!-- Offline Icon -->
+            <div class="mb-8">
+                <div
+                    class="w-24 h-24 mx-auto bg-blue-100 rounded-full flex items-center justify-center"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-12 w-12 text-blue-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"
+                        />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">
+                You're Offline
+            </h1>
+
+            <!-- Description -->
+            <p class="text-gray-600 mb-8">
+                It looks like you've lost your internet connection. Some
+                features may be unavailable until you reconnect.
+            </p>
+
+            <!-- Tips -->
+            <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                    What you can do:
+                </h3>
+                <ul class="text-left text-gray-600 space-y-3">
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span>View cached pages and data</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span>Continue working on existing tasks</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span>Access recently viewed content</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Actions -->
+            <div class="space-y-4">
+                <button
+                    @click="checkConnection"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                        />
+                    </svg>
+                    Check Connection
+                </button>
+
+                <button
+                    @click="goBack"
+                    class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-4 rounded-lg transition duration-200"
+                >
+                    Go Back
+                </button>
+            </div>
+
+            <!-- Connection Status -->
+            <div
+                v-if="connectionChecked"
+                class="mt-6 p-4 rounded-lg"
+                :class="
+                    isOnline
+                        ? 'bg-green-100 text-green-800'
+                        : 'bg-red-100 text-red-800'
+                "
+            >
+                <p class="font-medium">
+                    {{
+                        isOnline
+                            ? "Connection restored!"
+                            : "Still offline. Please check your internet."
+                    }}
+                </p>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import { ref } from "vue";
+import { router } from "@inertiajs/vue3";
+
+const connectionChecked = ref(false);
+const isOnline = ref(navigator.onLine);
+
+const checkConnection = () => {
+    connectionChecked.value = true;
+    isOnline.value = navigator.onLine;
+
+    if (isOnline.value) {
+        // Coba reload setelah 2 detik
+        setTimeout(() => {
+            window.location.reload();
+        }, 2000);
+    }
+};
+
+const goBack = () => {
+    window.history.back();
+};
+
+// Listen for online/offline events
+window.addEventListener("online", () => {
+    isOnline.value = true;
+    if (connectionChecked.value) {
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000);
+    }
+});
+
+window.addEventListener("offline", () => {
+    isOnline.value = false;
+});
+</script>

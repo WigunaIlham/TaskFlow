@@ -43,4 +43,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy');
 });
 
+Route::get('/offline', function () {
+    return Inertia::render('Offline');
+})->name('offline');
+
 require __DIR__.'/auth.php';

@@ -4,9 +4,7 @@
 
         <!-- Hero Section -->
         <div class="text-center mb-8">
-            <div
-                class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 mb-4"
-            >
+            <div>
                 <i class="pi pi-rocket text-white text-2xl"></i>
             </div>
             <h1 class="text-3xl font-bold text-gray-900">Welcome back!</h1>
@@ -125,37 +123,6 @@
                     Create one now
                 </Link>
             </p>
-        </div>
-
-        <!-- Social Login (Optional) -->
-        <div class="mt-8">
-            <div class="relative">
-                <div class="absolute inset-0 flex items-center">
-                    <div class="w-full border-t border-gray-300"></div>
-                </div>
-                <div class="relative flex justify-center text-sm">
-                    <span class="px-4 bg-white text-gray-500"
-                        >Or continue with</span
-                    >
-                </div>
-            </div>
-
-            <div class="mt-6 grid grid-cols-2 gap-3">
-                <button
-                    type="button"
-                    class="w-full inline-flex justify-center py-2.5 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                    <i class="pi pi-google text-red-500 mr-2"></i>
-                    Google
-                </button>
-                <button
-                    type="button"
-                    class="w-full inline-flex justify-center py-2.5 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                    <i class="pi pi-github text-gray-800 mr-2"></i>
-                    GitHub
-                </button>
-            </div>
         </div>
     </GuestLayout>
 </template>

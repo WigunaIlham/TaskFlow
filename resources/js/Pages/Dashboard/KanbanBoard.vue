@@ -535,7 +535,6 @@ import { useToast } from "primevue/usetoast";
 import { useConfirm } from "primevue/useconfirm";
 import BoardColumn from "@/Components/Kanban/BoardColumn.vue";
 import TaskForm from "@/Components/Kanban/TaskForm.vue";
-import TaskDetail from "@/Components/Kanban/TaskDetail.vue";
 
 const toast = useToast();
 const confirm = useConfirm();

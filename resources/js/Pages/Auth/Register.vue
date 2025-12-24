@@ -4,9 +4,7 @@
 
         <!-- Hero Section -->
         <div class="text-center mb-8">
-            <div
-                class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 mb-4"
-            >
+            <div>
                 <i class="pi pi-user-plus text-white text-2xl"></i>
             </div>
             <h1 class="text-3xl font-bold text-gray-900">Join TaskFlow</h1>
@@ -151,7 +149,7 @@
 
             <!-- Submit Button -->
             <PrimaryButton
-                class="w-full justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-200"
+                class="w-full justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200"
                 :class="{ 'opacity-50 cursor-not-allowed': form.processing }"
                 :disabled="form.processing"
             >
@@ -177,27 +175,6 @@
                     Sign in here
                 </Link>
             </p>
-        </div>
-
-        <!-- Benefits -->
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="text-center p-4 bg-blue-50 rounded-xl">
-                <i class="pi pi-rocket text-blue-600 text-xl mb-2"></i>
-                <p class="text-sm font-medium text-gray-900">Modern UI</p>
-                <p class="text-xs text-gray-600">
-                    Beautiful & intuitive interface
-                </p>
-            </div>
-            <div class="text-center p-4 bg-green-50 rounded-xl">
-                <i class="pi pi-shield text-green-600 text-xl mb-2"></i>
-                <p class="text-sm font-medium text-gray-900">Secure</p>
-                <p class="text-xs text-gray-600">Your data is protected</p>
-            </div>
-            <div class="text-center p-4 bg-purple-50 rounded-xl">
-                <i class="pi pi-bolt text-purple-600 text-xl mb-2"></i>
-                <p class="text-sm font-medium text-gray-900">Fast</p>
-                <p class="text-xs text-gray-600">Lightning fast performance</p>
-            </div>
         </div>
     </GuestLayout>
 </template>
