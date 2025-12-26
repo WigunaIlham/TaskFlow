@@ -47,4 +47,6 @@ Route::get('/offline', function () {
     return Inertia::render('Offline');
 })->name('offline');
 
+
+
 require __DIR__.'/auth.php';

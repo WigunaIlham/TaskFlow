@@ -27,12 +27,12 @@
                     <div
                         class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
                     >
-                        <i class="pi pi-user text-gray-400"></i>
+                        <i class="pi pi-user text-gray-700"></i>
                     </div>
                     <TextInput
                         id="name"
                         type="text"
-                        class="pl-10 w-full py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        class="pl-10 w-full py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 text-gray-800"
                         v-model="form.name"
                         required
                         autofocus
@@ -54,12 +54,12 @@
                     <div
                         class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
                     >
-                        <i class="pi pi-envelope text-gray-400"></i>
+                        <i class="pi pi-envelope text-gray-700"></i>
                     </div>
                     <TextInput
                         id="email"
                         type="email"
-                        class="pl-10 w-full py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        class="pl-10 w-full py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 text-gray-800"
                         v-model="form.email"
                         required
                         autocomplete="username"
@@ -80,12 +80,12 @@
                     <div
                         class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
                     >
-                        <i class="pi pi-lock text-gray-400"></i>
+                        <i class="pi pi-lock text-gray-700"></i>
                     </div>
                     <TextInput
                         id="password"
                         type="password"
-                        class="pl-10 w-full py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        class="pl-10 w-full py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 text-gray-800"
                         v-model="form.password"
                         required
                         autocomplete="new-password"
@@ -109,12 +109,12 @@
                     <div
                         class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
                     >
-                        <i class="pi pi-lock text-gray-400"></i>
+                        <i class="pi pi-lock text-gray-700"></i>
                     </div>
                     <TextInput
                         id="password_confirmation"
                         type="password"
-                        class="pl-10 w-full py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                        class="pl-10 w-full py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 text-gray-800"
                         v-model="form.password_confirmation"
                         required
                         autocomplete="new-password"
